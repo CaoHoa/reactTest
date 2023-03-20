@@ -5,7 +5,12 @@ import DashboardEmployee from './dashboard/DashboardEmployee';
 import Divider from '@mui/material/Divider';
 import SearchEmployee from './dashboard/SearchEmployee';
 import EmployeeTable from './dashboard/EmployeeTable'
+import { React } from 'react';
 function App() {
+  var dataRowVariable = {};
+  const dataRow = (row) => {
+    dataRowVariable = row;
+  }
   return (
     <>
       <div className="App">
@@ -21,7 +26,7 @@ function App() {
             </div>
           </div>
         </header>
-        <DashboardEmployee></DashboardEmployee>
+        <DashboardEmployee onDatarow={dataRow}></DashboardEmployee>
         <Divider color='black'></Divider>
         <SearchEmployee></SearchEmployee>
         <Divider color='black'></Divider>

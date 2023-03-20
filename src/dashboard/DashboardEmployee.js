@@ -10,11 +10,12 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import AddNewEmployee from "./AddNewEmployee";
 
-export default function DashboardEmployee(){
+export default function DashboardEmployee({onDatarow}){
     const [isopenDialog, setDialog] = React.useState(false);
 
     const handleSubmit = (formData) => {
-        console.log(formData)
+        // console.log("data:" + formData)
+        onDatarow(formData);
     }
 
     const openDialog = () => {
