@@ -62,8 +62,8 @@ export default function AddNewEmployee({open, onClose, onSubmit} ){
             aria-labelledby="alert-dialog-title"
             aria-describedby="alert-dialog-description"
             >
-            <DialogTitle style={{'background-color':'rgb(18,65,145)'}} id="alert-dialog-title">
-            <a style={{color:'white'}}>Add New Employee</a>
+            <DialogTitle style={{'backgroundColor':'rgb(18,65,145)'}} id="alert-dialog-title">
+            <a style={{'color':'white'}}>Add New Employee</a>
             </DialogTitle>
             <DialogContent>
             <TextField required autoFocus margin="dense" type="" id="name" label="Full name employee" fullWidth variant="standard" value={formData.name} onChange={handleNameChange}></TextField>

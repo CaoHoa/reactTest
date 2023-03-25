@@ -23,9 +23,8 @@ import FilterListIcon from '@mui/icons-material/FilterList';
 import { visuallyHidden } from '@mui/utils';
 import { Button } from '@mui/material';
 import InfoIcon from '@mui/icons-material/Info';
-import { useState } from 'react';
 
-function createData(id,name, phone, team, date, sex) {
+function CreateData(id,name, phone, team, date, sex) {
   return {
     id,
     name,
@@ -36,13 +35,23 @@ function createData(id,name, phone, team, date, sex) {
   };
 }
 
+function UpdateData(params) {
+  const row = params;
+  rows.push("");
+  console.log(row)
+  return(
+    <div></div>
+  );
+}
+
+UpdateData.params = {
+  params: PropTypes.row,
+}
+
 const rows = [
-  createData(1,'Cupcake', 305, 3.7, 67, 4.3),
-  createData(2,'Donut', 452, 25.0, 51, 4.9),
-  createData(3,'Eclair', 262, 16.0, 24, 6.0),
-  createData(4,'Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData(5,'Gingerbread', 356, 16.0, 49, 3.9),
-  createData(6,'Honeycomb', 408, 3.2, 87, 6.5),
+  CreateData(1,'Cupcake', 305, 3.7, 67, 4.3),
+  CreateData(2,'Donut', 452, 25.0, 51, 4.9),
+  CreateData(3,'Eclair', 262, 16.0, 24, 6.0),
 ];
 
 function descendingComparator(a, b, orderBy) {
@@ -233,7 +242,7 @@ EnhancedTableToolbar.propTypes = {
   numSelected: PropTypes.number.isRequired,
 };
 
-export default function EmployeeTable() {
+export default function EmployeeTable({onAdd}) {
   const [order, setOrder] = React.useState('asc');
   const [orderBy, setOrderBy] = React.useState('calories');
   const [selected, setSelected] = React.useState([]);

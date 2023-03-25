@@ -28,6 +28,8 @@
 .left-text {
   margin-left: 40px;
   float: left;
+  margin-top: 10px;
+  font-weight: 500;
 }
 
 .right-text {
