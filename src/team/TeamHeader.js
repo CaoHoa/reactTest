@@ -8,21 +8,7 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 
-export default function TeamHeader({onDatarow}){
-    const [isopenDialog, setDialog] = React.useState(false);
-
-    const handleSubmit = (formData) => {
-        // console.log("data:" + formData)
-        onDatarow(formData);
-    }
-
-    const openDialog = () => {
-        setDialog(true);
-    }
-
-    const handleSetClickOpenDialogAdd = () => {
-        setDialog(false)
-    };
+export default function TeamHeader(){
 
     const [open, setOpen] = React.useState(false);
     const handleClickOpen = () => {
@@ -40,7 +26,7 @@ export default function TeamHeader({onDatarow}){
                 <a>Team</a>
             </div>
             <div className="right-text">
-                <Button onClick={openDialog}><ControlPointIcon>add</ControlPointIcon></Button>
+                <Button onClick={handleClickOpen}><ControlPointIcon>add</ControlPointIcon></Button>
             </div>
         </div>
         <Dialog

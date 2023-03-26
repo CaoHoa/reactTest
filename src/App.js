@@ -23,7 +23,7 @@ function App() {
   }
   function A(props){
     const {mode} = props;
-    if(mode == 'true'){
+    if(mode === 'true'){
       return (<div>
         <DashboardEmployee onDatarow={dataRow}></DashboardEmployee>
         <Divider color='black'></Divider>
